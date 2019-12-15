@@ -5,7 +5,7 @@
   
   body {
     background: white;
-    background: linear-gradient(to bottom, white, rgb(48, 0, 70,0.555));
+    background: linear-gradient(to bottom, white, rgba(255, 140, 0, 0.555));
   }
   
   .card-signin {
@@ -24,7 +24,7 @@
   .card-signin .card-img-left {
     width: 45%;
     /* Link to your background image using in the property below! */
-    background: scroll center url("../Recursos/bgregister.jpg");
+    background: scroll center url("../Recursos/olvidopass.png");
     background-size: cover;
   }
   
@@ -122,9 +122,24 @@
 #submenuinicio{
     text-align: right;
 }
+#encabezadoinicio{
+    background-image: url(../Recursos/city.jpg);
+    background-size: cover;
+}
+#piepagina{
+    background-image: url(../Recursos/bgfooter.jpg);
+    background-size: cover;
+}
+
+#datosencabezadoinicio{
+    color: white;
+}
+#submenuinicio{
+    text-align: right;
+}
 
 #bg-orange{
-    background-color: rgb(48, 0, 70);
+    background-color:darkorange;
 }
 #icongit{
     width:50px;
@@ -134,5 +149,3 @@
     width:58px;
     height:58px;
 }
-
-

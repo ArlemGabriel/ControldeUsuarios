@@ -24,8 +24,7 @@
     background-size: cover;
 }
 #bg-orange{
-    background-color:grey;
-    background: linear-gradient(to bottom, black, #495057);
+    background-color:orangered;
 }
 #icongit{
     width:50px;
@@ -47,3 +46,7 @@
     padding-top: 0.2em;
     padding-bottom: 0.2em;
 }
+body {
+    background: white;
+    background: linear-gradient(to bottom, white, rgba(0, 0, 0, 0.555));
+  }

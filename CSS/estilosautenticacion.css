@@ -5,7 +5,7 @@
   
   body {
     background: white;
-    background: linear-gradient(to bottom, white, #495057);
+    background: linear-gradient(to bottom, white, rgba(30, 143, 255, 0.555));
   }
   
   .card-signin {
@@ -24,7 +24,7 @@
   .card-signin .card-img-left {
     width: 45%;
     /* Link to your background image using in the property below! */
-    background: scroll center url("../Recursos/registerbg.jpg");
+    background: scroll center url("../Recursos/bgauth.png");
     background-size: cover;
   }
   
@@ -139,7 +139,7 @@
 }
 
 #bg-orange{
-    background-color:orangered;
+    background-color:dodgerblue;
 }
 #icongit{
     width:50px;
