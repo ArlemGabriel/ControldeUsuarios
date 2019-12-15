@@ -9,7 +9,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="CSS/estilosregistro.css">
-  <link rel="stylesheet" type="text/css" href="CSS/estilosinicio.css">
+  
+  <script type = "text/javascript" src="JS/jsregistro.js"></script>
 </head>
 <body>
 
@@ -43,7 +44,7 @@
              <!-- Background image for card set in CSS! -->
           </div>
           <div class="card-body">
-            <h5 class="card-title text-center">Register</h5>
+            <h5 class="card-title text-center">Registro</h5>
             <form class="form-signin">
               <div class="form-label-group">
                 <input type="text" id="inputUserame" class="form-control" placeholder="Username" required autofocus>
@@ -60,8 +61,13 @@
               </div>
 
               <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address">
                 <label for="inputEmail">Correo Electrónico</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="number" id="inputNumber" class="form-control" placeholder="Phone Number">
+                <label for="inputNumber">Telefono</label>
               </div>
               
               <hr>
@@ -73,14 +79,12 @@
               
               <div class="form-label-group">
                 <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
-                <label for="inputConfirmPassword">Confirmar Contraseña/label>
+                <label for="inputConfirmPassword">Confirmar Contraseña</label>
               </div>
 
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</button>
-              <a class="d-block text-center mt-2 small" href="#">Sign In</a>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Registrarse</button>
+              <a class="d-block text-center mt-2 small" href="autenticacion.html">Acceder</a>
               <hr class="my-4">
-              <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign up with Google</button>
-              <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign up with Facebook</button>
             </form>
           </div>
         </div>
