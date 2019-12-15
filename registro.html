@@ -52,26 +52,43 @@
           </div>
           <div class="card-body">
             <h5 class="card-title text-center">Registro</h5>
-            <form class="form-signin">
+            <form class="form-register" action="#registrarbackend" onsubmit="return validar();">
+
               <div class="form-label-group">
-                <input type="text" id="inputUserame" class="form-control" placeholder="Username" required autofocus>
-                <label for="inputUserame">Usuario</label>
+                <input type="text" id="inputUserame" class="form-control" placeholder="Username">
+                <small id="passwordHelpBlock" class="form-text text-muted">
+                  Su nombre de usuario debe contener de 3-16 caracteres, puede contener letras y números, guiones bajos _ y guiones altos -
+                </small>
+                <label for="inputUserame">Usuario*</label>
               </div>
-              <div class="form-label-group">
-                <input type="text" id="inputName" class="form-control" placeholder="Name" required autofocus>
-                <label for="inputName">Nombre</label>
+              
+              
+              <div class="alert alert-danger fade show" style="display:none;" role="alert" id="usuarioalert">
+                <strong>Error: </strong> Formato de nombre de usuario inválido
               </div>
 
               <div class="form-label-group">
-                <input type="text" id="inputLastName" class="form-control" placeholder="LastName" required autofocus>
-                <label for="inputLastName">Apellidos</label>
+                <input type="text" id="inputName" class="form-control" placeholder="Name">
+                <label for="inputName">Nombre*</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="text" id="inputLastName" class="form-control" placeholder="LastName">
+                <label for="inputLastName">Apellidos*</label>
+              </div>
+
+              <div class="alert alert-danger fade show" style="display:none;" role="alert" id="nombreapellidosalert">
+                <strong>Error: </strong> Los campos de nombre y apellido solamente deben contener letras
               </div>
 
               <div class="form-label-group">
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address">
-                <label for="inputEmail">Correo Electrónico</label>
+                <label for="inputEmail">Correo Electrónico*</label>
               </div>
 
+              <div class="alert alert-danger fade show" style="display:none;" role="alert" id="formatocorreoalert">
+                <strong>Error: </strong> Formato de correo inválido
+              </div>
 
                 <div class="form-label-group date ag-date">
                   <input type="text" id="inputBirth" class="form-control">
@@ -85,20 +102,37 @@
                 <input type="number" id="inputNumber" class="form-control" placeholder="Phone Number">
                 <label for="inputNumber">Telefono</label>
               </div>
-              
+              <div class="alert alert-danger fade show" style="display:none;" role="alert" id="telefonoalert">
+                <strong>Error: </strong> Formato de télefono inválido
+              </div>
               <hr>
 
               <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                <label for="inputPassword">Contraseña</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password">
+                <label for="inputPassword">Contraseña*</label>
+              </div>
+
+              <div class="alert alert-danger fade show" style="display:none;" role="alert" id="passwordalert">
+                <strong>Error: </strong> Formato de contraseña inválido
               </div>
               
               <div class="form-label-group">
-                <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
-                <label for="inputConfirmPassword">Confirmar Contraseña</label>
+                <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password">
+                <small id="passwordHelpBlock" class="form-text text-muted">
+                  Su contraseña debe tener de 8-16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.
+                  además no debe contener espacios en blanco, caracteres especiales, emojis, ni otros símbolos
+                </small>
+                <label for="inputConfirmPassword">Confirmar Contraseña*</label>
               </div>
 
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Registrarse</button>
+              <div class="alert alert-danger fade show" style="display:none;" role="alert" id="passwordconfalert">
+                <strong>Error: </strong> Las contraseñas no coinciden
+              </div>
+              <div class="alert alert-danger fade show" style="display:none;" role="alert" id="camposobligatoriosalert">
+                <strong>Error: </strong> Los campos con * son obligatorios
+              </div>
+
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" >Registrarse</button>
               <a class="d-block text-center mt-2 small" href="autenticacion.html">Acceder</a>
               <hr class="my-4">
             </form>
