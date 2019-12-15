@@ -9,6 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="CSS/estilosautenticacion.css">
+  <script src="js/autenticacion.js"></script>
 </head>
 <body>
 
@@ -42,18 +43,21 @@
         </div>
         <div class="card-body">
           <h5 class="card-title text-center">Acceso</h5>
-          <form class="form-signin">
+          <form class="form-signin" action="perfilusuario.html" onsubmit="return validarusuariotemp();">
             <div class="form-label-group">
-              <input type="text" id="inputUserame" class="form-control" placeholder="Username" required autofocus>
-              <label for="inputUserame">Usuario</label>
+              <input type="text" id="authusuario" class="form-control" placeholder="Authusername" required autofocus>
+              <label for="authusuario">Usuario</label>
             </div>
 
             <div class="form-label-group">
-              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-              <label for="inputPassword">Contraseña</label>
+              <input type="password" id="authpass" class="form-control" placeholder="Authpassword" required>
+              <label for="authpass">Contraseña</label>
               <a class="d-block text-left mt-2 small" href="recuperarcontraseña.html">¿Olvidó su contraseña?</a>
             </div>
 
+            <div class="alert alert-danger fade show" style="display:none;" role="alert" id="authalert">
+              <strong>Error: </strong> Usuario Inválido
+            </div>
             <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Acceder</button>
             <a class="d-block text-center mt-2 small" href="registro.html">Registrarse</a>
             <hr class="my-4">
